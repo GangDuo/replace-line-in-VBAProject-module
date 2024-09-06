@@ -23,6 +23,16 @@ cscript .\Make.vbs
 
 自動作成されるbatファイルを実行する。
 
+## xlsmをxstmへ変換
+
+```
+cscript .\SaveAsXltm.vbs
+
+dir /b /s | findstr ".xlsm$" > temp.txt
+for /f %%f in (temp.txt) do del "%%f"
+del temp.txt
+```
+
 ## 参考
 
 [【EXCEL】VBA-マクロのパスワード解除方法【コード有】](https://nkmrdai.com/vba-password-unrocked/)
